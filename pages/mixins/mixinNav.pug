@@ -1,0 +1,7 @@
+mixin mixinNav 
+    nav 
+            ul
+                -var contentsNav = {'Inicio':['index.html'],'Significado':['significado.html'], 'Uso':['uso.html'],'Cultura':['cultura.html']}
+                each content, title in contentsNav 
+                    li
+                        a(href=content[0])= title      
