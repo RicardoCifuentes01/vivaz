@@ -1,3 +1,92 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply flex;
+        @apply flex-col;
+        @apply gap-16m;
+        @apply font-quicksand;
+    }
+
+    h1 {
+        @apply mt-8m;
+        @apply mb-[22vw];
+        @apply text-titleHeaderm;
+        @apply text-white-g;
+        @apply font-bold;
+        @apply text-center;
+    }
+
+    h2 {
+        @apply text-titlem;
+        @apply text-center;
+        @apply mb-4m;
+        @apply font-bold;
+    }
+
+    h3 {
+        @apply my-16m;
+        @apply text-center;
+        @apply text-basem;
+        @apply text-gray-g;
+        @apply font-bold;
+    }
+
+    ul {
+        @apply list-none;
+    }
+
+
+    header figure {
+        @apply m-[0px];
+    }
+
+    p {
+        @apply mx-auto;
+        @apply w-[84vw];
+        @apply text-basem;
+        @apply leading-lhm;
+    }
+
+    a {
+        @apply text-basem;
+        @apply font-bold;
+    }
+
+    aside h2 {
+        @apply mt-8m;
+    }
+
+    aside figure {
+        @apply w-[50%];
+        @apply mt-16m;
+        @apply mb-8m;
+        @apply mx-auto;
+    }
+
+    figure {
+        @apply mx-auto;
+        @apply my-16m;
+    }
+
+    article {
+        @apply mx-auto;
+        @apply py-16m;
+        @apply px-4m;
+        @apply w-[92%];
+        @apply text-white-g;
+        @apply rounded-[4vw];
+    }
+
+    article h1 {
+        @apply mb-4m;
+        @apply text-titlem;
+        @apply text-center;
+    }
+
+    footer figure {
+        @apply w-[20%];
+    }
+}
