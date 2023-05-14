@@ -48,22 +48,23 @@ html(lang="en")
                         rect(x="61", y="110", width="38", height="3.85", fill="#7F2F8E", rx="2", ry="2") 
                 h2 Aplicación 
                 p Encuentra información sobre cómo los colores afectan nuestras emociones, pensamientos y comportamientos.
-        nav 
-            ul
-                -var contentsNav = {'Significado':['El color es una herramienta poderosa para evocar emociones y sentimientos en las personas. Los colores pueden afectar nuestro estado de ánimo, nuestra percepción del espacio y nuestra capacidad para concentrarnos y trabajar. Cada color tiene una vibración única y puede tener un impacto psicológico diferente en cada individuo.','significado.html'], 'Uso':['Utiliza el color en una amplia gama de contextos para comunicar mensajes, expresar la personalidad y el estilo, crear ambientes y mejorar la funcionalidad y seguridad de los productos y lugares.','uso.html'], 'Cultura':['Los colores tienen un papel importante en la identidad cultural y se utilizan para simbolizar significados y tradiciones específicos en diferentes culturas del mundo. Además, se utilizan en el arte y la literatura para crear imágenes y atmósferas emocionales específicas que transmiten mensajes culturales y sociales.','cultura.html']}
+        nav
+            ul(class="flex flex-col gap-16m text-white-g") 
+                -var contentsNav = {'Significado':['El color es una herramienta poderosa para evocar emociones y sentimientos en las personas. Los colores pueden afectar nuestro estado de ánimo, nuestra percepción del espacio y nuestra capacidad para concentrarnos y trabajar. Cada color tiene una vibración única y puede tener un impacto psicológico diferente en cada individuo.','significado.html', 'yellow-g','purple-g'], 'Uso':['Utiliza el color en una amplia gama de contextos para comunicar mensajes, expresar la personalidad y el estilo, crear ambientes y mejorar la funcionalidad y seguridad de los productos y lugares.','uso.html','blue-g','yellow-g'], 'Cultura':['Los colores tienen un papel importante en la identidad cultural y se utilizan para simbolizar significados y tradiciones específicos en diferentes culturas del mundo. Además, se utilizan en el arte y la literatura para crear imágenes y atmósferas emocionales específicas que transmiten mensajes culturales y sociales.','cultura.html', 'purple-g','blue-g']}
                 each content, title in contentsNav 
-                    li
+                    li(class=`mx-auto py-16m w-[92%] bg-${content[2]} rounded-[4vw]`)
                         h2= title 
                         p= content[0]
-                        a(href=content[1]) Explora
+                        a(class=`block w-[65%] mt-16m mx-auto py-[2vw] text-center text-basem bg-${content[3]} rounded-[6.5vw]`, href=content[1]) Explora
         main 
             h2 Nuestra viveza 
             div
                 -var contentsMain = {'El color es una parte esencial de nuestra vida, y lo encontramos en casi todas partes: en la naturaleza, en la ropa que vestimos, en los objetos que usamos y en la comida que comemos. Cada color tiene una energía y una personalidad única que puede afectar nuestro estado de ánimo, nuestras emociones y nuestra percepción del mundo que nos rodea.':['https://i.ibb.co/k9GzDcs/colores-Inicio1.jpg', 'Tizas de colores'], 'Cada persona tiene una conexión única con los colores. Algunas personas se sienten atraídas por colores brillantes y audaces, mientras que otras prefieren tonos más suaves y sutiles. Algunos colores pueden hacernos sentir felices y enérgicos. ':['https://i.ibb.co/mTxT13s/atardecer-Inicio2.jpg','Atardecer'], 'Mientras que otros pueden ser calmantes y relajantes. La elección de nuestros colores favoritos puede decir mucho sobre nuestra personalidad y nuestras emociones.':['https://i.ibb.co/XpLh3G8/ciudad-Inicio3.jpg', 'Ciudad en la noche con luces azules'], 'Incluso en diferentes culturas y tradiciones, los colores tienen significados específicos. Por ejemplo, el rojo puede ser un símbolo de pasión y amor en algunas culturas, mientras que en otras puede ser un color asociado con la ira y el peligro. El amarillo puede ser visto como un color de alegría y optimismo en algunos lugares, mientras que en otros puede ser considerado como un signo de peligro o mala suerte.':['https://i.ibb.co/9Z2c8mX/flor-Inicio4.jpg','Flor purpura en fondo negro']}
                 each image, text in contentsMain 
                     p= text 
-                    figure
-                        img(src=image[0], alt=image[1], title=image[1])
+                    figure(class="w-[84%] h-[84vw]")
+                        img(class="h-[100%] object-cover", src=image[0], alt=image[1], title=image[1])
             p En resumen, el color es una parte integral de nuestra vida cotidiana. Nos rodea en todo momento y tiene una influencia profunda en nuestro estado de ánimo, emociones y percepciones. Cada uno de nosotros tiene una conexión única con los colores y podemos usarlos para expresarnos y comunicar nuestra  personalidad.
             include mixins/mixinFooter.pug 
             +mixinFooter
+        

@@ -1,14 +1,14 @@
 mixin mixinFooter
     footer
-            ul
-                -var contentsFooter = {'https://i.ibb.co/W2s9Vh8/pug.jpg':'Pug. Estructura y contenido.', 'https://i.ibb.co/vBdRgXZ/tailwind3.png':'Tailwind 3. Estilos', 'https://i.ibb.co/y05fjM1/git.png':'Git. Control de versiones.','https://i.ibb.co/64zyw46/pexels.jpg':'Pexels. Imágenes', 'https://i.ibb.co/wY23qW6/openIA.png':'OpenIA. Textos e imágenes', 'https://i.ibb.co/k6jDLmZ/figma.png':'Figma. Diseño.'}
-                each text, image in contentsFooter
-                    li
-                        figure
-                            img(src=image, alt=text, title=text)
-                        p= text
-            h3 Mayo 2023
-            a(href="https://platzi.com/p/ricardo-racm/")
-                p Ricardo Cifuentes. Portafolio y perfil.
-                figure
-                    img(src="https://i.ibb.co/S32Pccf/platzi.webp", alt="Perfil en Platzi" title="Perfil en Platzi")  
+        ul
+            -var contentsFooter = {'https://i.ibb.co/W2s9Vh8/pug.jpg':'Pug. Estructura y contenido.', 'https://i.ibb.co/vBdRgXZ/tailwind3.png':'Tailwind 3. Estilos', 'https://i.ibb.co/y05fjM1/git.png':'Git. Control de versiones.','https://i.ibb.co/64zyw46/pexels.jpg':'Pexels. Imágenes', 'https://i.ibb.co/wY23qW6/openIA.png':'OpenIA. Textos e imágenes', 'https://i.ibb.co/k6jDLmZ/figma.png':'Figma. Diseño.'}
+            each text, image in contentsFooter
+                li(class="flex flex-row my-8m")
+                    figure(class="mx-8m my-[0px]")
+                        img(src=image, alt=text, title=text)
+                    p= text
+        h3 Mayo 2023
+        a(class="flex mx-auto text-gray-g", href="https://platzi.com/p/ricardo-racm/")
+            p(class="m-[0px] ml-[15%] w-2/4") Ricardo Cifuentes. Portafolio y perfil.
+            figure(class="m-[0px] mb-16m")
+                img(src="https://i.ibb.co/S32Pccf/platzi.webp", alt="Perfil en Platzi" title="Perfil en Platzi")  

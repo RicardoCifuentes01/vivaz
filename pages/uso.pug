@@ -21,11 +21,11 @@ html(lang="en")
             h2 Uso 
             p El uso del color es una herramienta esencial en muchas áreas de la vida, desde el diseño gráfico y la publicidad hasta la moda y la decoración del hogar. 
                 |La elección de los colores también puede ser utilizada para diferenciar marcas, productos o servicios, y para mejorar la legibilidad y la accesibilidad de los diseños.
-            figure
-                img(src="https://i.ibb.co/gV9CwKz/mujer-Uso1.jpg", alt="Mujer corriendo entre flores rojas", title="Mujer corriendo entre flores rojas")
-                img(src="https://i.ibb.co/YtywQrQ/museo-Uso2.jpg", alt="Fachada de museo en varios colores", title="Fachada de museo en varios colores")
-                img(src="https://i.ibb.co/cvczMTm/fresas-Uso3.jpg", alt="Fresas", title="Fresas")
-        main
+            figure(class="flex flex-col flex-wrap mt-16m mb-[0px] w-[60%] h-[60vw]")
+                img(class="w-[50%] h-full object-cover", src="https://i.ibb.co/gV9CwKz/mujer-Uso1.jpg", alt="Mujer corriendo entre flores rojas", title="Mujer corriendo entre flores rojas")
+                img(class="w-[50%] h-2/4", src="https://i.ibb.co/YtywQrQ/museo-Uso2.jpg", alt="Fachada de museo en varios colores", title="Fachada de museo en varios colores")
+                img(class="w-[50%] h-2/4", src="https://i.ibb.co/cvczMTm/fresas-Uso3.jpg", alt="Fresas", title="Fresas")
+        main(class="uso-main")
             article
                 h1 Teoría del color 
                 p 
@@ -63,19 +63,19 @@ html(lang="en")
                     br
                     |Actualmente, la tendencia del color se enfoca en tonos terrosos y naturales, como los marrones, verdes y tonos de beige. Los colores pastel también son populares, especialmente los tonos de rosa, lila y azul claro. 
                 figure 
-                    img(src="https://i.ibb.co/W3GVz0m/colores-Uso11.jpg", alt="Colores terrosos", title="Colores terrosos")
-                    img(src="https://i.ibb.co/8dZKgLT/colores-Uso12.jpg", alt="Colores pasteles", title="Colores pasteles")
+                    img(class="inline-block w-2/4 h-[60vw] object-cover", src="https://i.ibb.co/W3GVz0m/colores-Uso11.jpg", alt="Colores terrosos", title="Colores terrosos")
+                    img(class="inline-block w-2/4 h-[60vw] object-cover", src="https://i.ibb.co/8dZKgLT/colores-Uso12.jpg", alt="Colores pasteles", title="Colores pasteles")
                 p Los colores cálidos, como el rojo y el amarillo, también están en tendencia, especialmente en tonos más suaves.
                     |Además, el uso de colores brillantes y saturados sigue siendo popular, pero en combinación con tonos más suaves y neutros para lograr un equilibrio y contraste armonioso. La combinación de colores complementarios también es una tendencia actual en la moda y el diseño gráfico, lo que permite una gama más amplia de posibilidades creativas.
-                figure 
+                figure(class="mb-[0px]") 
                     img(src="https://i.ibb.co/M6pczpQ/mujer-Uso13.jpg", alt="Mujer con fondo de colores suavez y saturados")
             article
                 h1 Recursos
-                ol
+                ul
                     -var contentsRecursos = {'Adobe color':[' https://color.adobe.com/es/create/color-wheel', 'Adobe Color es una herramienta de color en línea que te permite crear combinaciones de colores personalizadas a partir de la rueda de colores. Puedes elegir entre diferentes reglas de color, como análogos, complementarios y monocromáticos, para crear combinaciones que se ajusten a tus necesidades. También puedes explorar las combinaciones creadas por otros usuarios y guardar tus combinaciones favoritas en tu cuenta de Adobe.'], 'Canva Color Palette Generator':['https://www.canva.com/colors/color-palette-generator/','Canva Color Palette Generator es una herramienta que te permite generar paletas de colores a partir de una imagen que subas o de una URL. Puedes ajustar los colores de la paleta para que se ajusten a tus necesidades y descargar la paleta como un archivo de imagen o como un archivo de Canva para usarla en tus diseños.'], 'Paletton':['https://paletton.com/','Paletton es una herramienta de diseño de color en línea que te permite crear combinaciones de colores personalizadas para tus diseños. Puedes seleccionar colores a partir de la rueda de colores y ajustar los valores de brillo, saturación y tono para crear una combinación que se ajuste a tus necesidades. También puedes guardar tus combinaciones de colores y descargarlas como archivos de imagen.'], 'Colormind':['https://colormind.io/','Colormind es una herramienta en línea que genera paletas de colores de forma automática a partir de una selección de colores base que elijas. Puedes seleccionar colores específicos o dejar que Colormind los elija por ti. La herramienta también te permite ajustar los colores de la paleta y descargarla como un archivo de imagen.']}
                     each content, title in contentsRecursos 
                         li
-                            a(href=content[0]) #{title}
+                            a(class="underline text-blue-g", href=content[0]) #{title}
                             p= content[1]
         include mixins/mixinFooter.pug 
         +mixinFooter

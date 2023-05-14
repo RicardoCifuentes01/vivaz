@@ -45,7 +45,7 @@
 
     p {
         @apply mx-auto;
-        @apply w-[84vw];
+        @apply w-[84%];
         @apply text-basem;
         @apply leading-lhm;
     }
@@ -61,7 +61,7 @@
 
     aside figure {
         @apply w-[50%];
-        @apply mt-16m;
+        @apply mt-[0];
         @apply mb-8m;
         @apply mx-auto;
     }
@@ -88,5 +88,28 @@
 
     footer figure {
         @apply w-[20%];
+    }
+}
+
+@layer components {
+
+    .uso-main h1 {
+        @apply text-black-g;
+    }
+
+    .uso-main p {
+        @apply text-black-g;
+    }
+
+    .uso-main article {
+        @apply py-8m;
+    }
+
+    .uso-main figure {
+        @apply w-[60vw]
+    }
+
+    .cultura-article h1 {
+        @apply mt-[0px]
     }
 }

@@ -1,7 +1,7 @@
 mixin mixinNav 
     nav 
-            ul
-                -var contentsNav = {'Inicio':['index.html'],'Significado':['significado.html'], 'Uso':['uso.html'],'Cultura':['cultura.html']}
-                each content, title in contentsNav 
-                    li
-                        a(href=content[0])= title      
+        ul(class="flex flex-col gap-4m px-4m")
+            -var contentsNav = {'Inicio':['index.html', 'black-g'],'Significado':['significado.html', 'yellow-g'], 'Uso':['uso.html', 'blue-g'],'Cultura':['cultura.html', 'purple-g']}
+            each content, title in contentsNav 
+                li(class=`mx-auto my-4m px-[2vw] w-[60vw] h-auto text-center border-l border-${content[1]}`)
+                    a(class=`block text-${content[1]} text-titlem` href=content[0])= title      
