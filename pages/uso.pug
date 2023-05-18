@@ -21,11 +21,11 @@ html(lang="en")
             h2 Uso 
             p El uso del color es una herramienta esencial en muchas áreas de la vida, desde el diseño gráfico y la publicidad hasta la moda y la decoración del hogar. 
                 |La elección de los colores también puede ser utilizada para diferenciar marcas, productos o servicios, y para mejorar la legibilidad y la accesibilidad de los diseños.
-            figure(class="flex flex-col flex-wrap mt-16m mb-[0px] w-[60%] h-[60vw]")
-                img(class="w-[50%] h-full object-cover", src="https://i.ibb.co/gV9CwKz/mujer-Uso1.jpg", alt="Mujer corriendo entre flores rojas", title="Mujer corriendo entre flores rojas")
+            figure(class="flex flex-col flex-wrap mt-16m mb-[0px] w-[60%] h-[60vw] tablet:mt-32t tablet:w-[42.86%] tablet:h-[42.86vw]")
+                img(class="w-[50%]", src="https://i.ibb.co/gV9CwKz/mujer-Uso1.jpg", alt="Mujer corriendo entre flores rojas", title="Mujer corriendo entre flores rojas")
                 img(class="w-[50%] h-2/4", src="https://i.ibb.co/YtywQrQ/museo-Uso2.jpg", alt="Fachada de museo en varios colores", title="Fachada de museo en varios colores")
                 img(class="w-[50%] h-2/4", src="https://i.ibb.co/cvczMTm/fresas-Uso3.jpg", alt="Fresas", title="Fresas")
-        main(class="uso-main")
+        main(class="uso-main tablet:flex tablet:flex-wrap")
             article
                 h1 Teoría del color 
                 p 
@@ -47,13 +47,13 @@ html(lang="en")
                 h1 Armonía del color 
                 p La armonía del color se refiere a la forma en que diferentes colores interactúan entre sí para crear una combinación estética agradable y equilibrada. La armonía del color se utiliza en una variedad de disciplinas, desde el diseño gráfico hasta la moda y la decoración de interiores.
                     |Existen varios tipos de armonía del color que se pueden utilizar para crear diferentes efectos visuales. Algunos de los más comunes son:
-                ol 
+                ul 
                     -var contentsArmonia = {'https://i.ibb.co/h29vXKN/loboUso7.jpg':['Lobo con fondo rojo, verde y negro', 'Armonía del color complementario: se basa en la combinación de colores opuestos en la rueda de colores. Por ejemplo, el azul y el naranja son colores complementarios. Esta combinación puede ser muy impactante y dramática, y se utiliza a menudo en publicidad y diseño gráfico.', 'black-u'], 'https://i.ibb.co/hKdnvKh/atardecer-Uso8.jpg':['Atardecer','Armonía del color análogo: se basa en la combinación de colores que se encuentran cerca en la rueda de colores. Por ejemplo, el rojo, el naranja y el amarillo son colores análogos. Esta combinación es suave y relajante, y se utiliza a menudo en la decoración de interiores.', 'yellow-u'] , 'https://i.ibb.co/rv3mJYh/pastel-Uso9.jpg':['Pastel con decoración verde, azul y naranja', 'Armonía del color triádico: se basa en la combinación de tres colores equidistantes en la rueda de colores. Por ejemplo, el rojo, el amarillo y el azul son colores triádicos. Esta combinación puede ser muy vibrante y alegre.', 'green-u'], 'https://i.ibb.co/W27sR5M/flor-Uso10.jpg':['Flor roja', 'Armonía del color monótono: se basa en la combinación de diferentes tonalidades de un solo color. Por ejemplo, el azul claro, el azul medio y el azul oscuro son tonalidades monótonas. Esta combinación puede ser muy elegante y sofisticada.', 'fuxia-u']}
                     each content, image in contentsArmonia 
-                        li
-                            figure
+                        li(class=`bg-${content[2]} py-16m tablet:py-32t`)
+                            figure(class="mt-[0px] mx-auto w-[70%]")
                                 img(src=image, alt=content[0], title=content[0])
-                            p= content[1]
+                            p(class="px-[10%]")= content[1]
                 br
                 p Además de estos tipos de armonía del color, también es importante considerar la saturación, el brillo y la intensidad de los colores. Estos factores pueden afectar la forma en que los colores interactúan entre sí y pueden ayudar a crear una combinación de colores más equilibrada y agradable a la vista.
             article 
@@ -63,8 +63,8 @@ html(lang="en")
                     br
                     |Actualmente, la tendencia del color se enfoca en tonos terrosos y naturales, como los marrones, verdes y tonos de beige. Los colores pastel también son populares, especialmente los tonos de rosa, lila y azul claro. 
                 figure 
-                    img(class="inline-block w-2/4 h-[60vw] object-cover", src="https://i.ibb.co/W3GVz0m/colores-Uso11.jpg", alt="Colores terrosos", title="Colores terrosos")
-                    img(class="inline-block w-2/4 h-[60vw] object-cover", src="https://i.ibb.co/8dZKgLT/colores-Uso12.jpg", alt="Colores pasteles", title="Colores pasteles")
+                    img(class="inline-block w-2/4 h-[60vw] tablet:h-[28.57vw]", src="https://i.ibb.co/W3GVz0m/colores-Uso11.jpg", alt="Colores terrosos", title="Colores terrosos")
+                    img(class="inline-block w-2/4 h-[60vw] tablet:h-[28.57vw]", src="https://i.ibb.co/8dZKgLT/colores-Uso12.jpg", alt="Colores pasteles", title="Colores pasteles")
                 p Los colores cálidos, como el rojo y el amarillo, también están en tendencia, especialmente en tonos más suaves.
                     |Además, el uso de colores brillantes y saturados sigue siendo popular, pero en combinación con tonos más suaves y neutros para lograr un equilibrio y contraste armonioso. La combinación de colores complementarios también es una tendencia actual en la moda y el diseño gráfico, lo que permite una gama más amplia de posibilidades creativas.
                 figure(class="mb-[0px]") 
@@ -74,8 +74,8 @@ html(lang="en")
                 ul
                     -var contentsRecursos = {'Adobe color':[' https://color.adobe.com/es/create/color-wheel', 'Adobe Color es una herramienta de color en línea que te permite crear combinaciones de colores personalizadas a partir de la rueda de colores. Puedes elegir entre diferentes reglas de color, como análogos, complementarios y monocromáticos, para crear combinaciones que se ajusten a tus necesidades. También puedes explorar las combinaciones creadas por otros usuarios y guardar tus combinaciones favoritas en tu cuenta de Adobe.'], 'Canva Color Palette Generator':['https://www.canva.com/colors/color-palette-generator/','Canva Color Palette Generator es una herramienta que te permite generar paletas de colores a partir de una imagen que subas o de una URL. Puedes ajustar los colores de la paleta para que se ajusten a tus necesidades y descargar la paleta como un archivo de imagen o como un archivo de Canva para usarla en tus diseños.'], 'Paletton':['https://paletton.com/','Paletton es una herramienta de diseño de color en línea que te permite crear combinaciones de colores personalizadas para tus diseños. Puedes seleccionar colores a partir de la rueda de colores y ajustar los valores de brillo, saturación y tono para crear una combinación que se ajuste a tus necesidades. También puedes guardar tus combinaciones de colores y descargarlas como archivos de imagen.'], 'Colormind':['https://colormind.io/','Colormind es una herramienta en línea que genera paletas de colores de forma automática a partir de una selección de colores base que elijas. Puedes seleccionar colores específicos o dejar que Colormind los elija por ti. La herramienta también te permite ajustar los colores de la paleta y descargarla como un archivo de imagen.']}
                     each content, title in contentsRecursos 
-                        li
-                            a(class="underline text-blue-g", href=content[0]) #{title}
-                            p= content[1]
+                        li(class="my-16m tablet:my-32t")
+                            a(class="block ml-[9%] mb-4m underline text-blue-g tablet:ml-[0px] tablet:mb-8t", href=content[0]) #{title}
+                            p(class="text-black-g")= content[1]
         include mixins/mixinFooter.pug 
         +mixinFooter

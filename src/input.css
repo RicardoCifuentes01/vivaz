@@ -50,6 +50,12 @@
         @apply leading-lhm;
     }
 
+    img {
+        @apply w-full;
+        @apply h-full;
+        @apply object-cover;
+    }
+
     a {
         @apply text-basem;
         @apply font-bold;
@@ -89,6 +95,67 @@
     footer figure {
         @apply w-[20%];
     }
+
+    @media screen(tablet) {
+        body {
+            @apply gap-32t;
+        }
+
+        h1 {
+            @apply mt-16t;
+            @apply mb-[10vw];
+            @apply text-titleHeadert;
+        }
+
+        h2 {
+            @apply text-titlet;
+            @apply mb-8t;
+        }
+
+        h3 {
+            @apply my-32t;
+            @apply text-baset;
+        }
+
+        p {
+            @apply w-[71.43%];
+            @apply text-baset;
+            @apply leading-lht;
+        }
+
+        a {
+            @apply text-baset;
+        }
+
+        aside h2 {
+            @apply mt-32t;
+        }
+
+        aside figure {
+            @apply w-[14.29%];
+            @apply mb-16t;
+        }
+
+        figure {
+            @apply my-16t;
+        }
+
+        article {
+            @apply py-32t;
+            @apply px-16t;
+            @apply w-[100%];
+            @apply rounded-[2.29vw];
+        }
+
+        article h1 {
+            @apply mb-8t;
+            @apply text-titlet;
+        }
+
+        footer figure {
+            @apply w-[8%];
+        }
+    }
 }
 
 @layer components {
@@ -97,7 +164,7 @@
         @apply text-black-g;
     }
 
-    .uso-main p {
+    .uso-main article>p {
         @apply text-black-g;
     }
 
@@ -106,10 +173,31 @@
     }
 
     .uso-main figure {
-        @apply w-[60vw]
+        @apply w-[60vw];
     }
 
     .cultura-article h1 {
-        @apply mt-[0px]
+        @apply mt-[0px];
+    }
+
+    @media screen(tablet) {
+
+        .uso-main article {
+            @apply mt-[0px];
+            @apply w-[41.43%];
+            @apply py-16t;
+        }
+
+        .uso-main figure {
+            @apply w-[30vw];
+        }
+
+        .uso-main p {
+            @apply w-full;
+        }
+
+        .cultura-article p {
+            @apply w-full;
+        }
     }
 }

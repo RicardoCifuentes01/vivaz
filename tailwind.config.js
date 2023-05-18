@@ -64,8 +64,41 @@ module.exports = {
       'lht': '4.58vw',
       'lhd': '2.34vw',
     },
-    extend: {},
+    extend: {
+      gridTemplateAreas: {
+        'layoutSignificado': [
+          'r o y',
+          'r o y',
+          'r o y',
+          'r b b',
+          'r b b',
+          'r g g',
+          'r g g',
+          'w w p',
+          'w w p',
+          'w w p',
+          'k k k',
+          'k k k',
+        ],
+        'layoutCultura': [
+          'e e e e c c',
+          'e e e e c c',
+          'e e e e c c',
+          'e e e e c c',
+          'i i i i i i',
+          'i i i i i i',
+          'g g g p p p',
+          'g g g p p p',
+          'g g g p p p',
+          'g g g p p p',
+        ],
+        'layoutCulturaIndia': [
+          'p1 p1 i1',
+          'i2 p2 p2'
+        ],
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('@savvywombat/tailwindcss-grid-areas')],
 }
 
