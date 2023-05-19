@@ -11,8 +11,6 @@
     }
 
     h1 {
-        @apply mt-8m;
-        @apply mb-[22vw];
         @apply text-titleHeaderm;
         @apply text-white-g;
         @apply font-bold;
@@ -92,18 +90,12 @@
         @apply text-center;
     }
 
-    footer figure {
-        @apply w-[20%];
-    }
-
     @media screen(tablet) {
         body {
             @apply gap-32t;
         }
 
         h1 {
-            @apply mt-16t;
-            @apply mb-[10vw];
             @apply text-titleHeadert;
         }
 
@@ -151,9 +143,63 @@
             @apply mb-8t;
             @apply text-titlet;
         }
+    }
 
-        footer figure {
-            @apply w-[8%];
+    @media screen(desktop) {
+        body {
+            @apply gap-64d;
+        }
+
+        h1 {
+            @apply text-titleHeaderd;
+        }
+
+        h2 {
+            @apply text-titled;
+            @apply mb-16d;
+        }
+
+        h3 {
+            @apply my-32d;
+            @apply text-based;
+        }
+
+        a {
+            @apply text-based
+        }
+
+        p {
+            @apply w-[88%];
+            @apply text-based;
+            @apply leading-lhd;
+        }
+
+        aside h2 {
+            @apply mt-32d;
+        }
+
+        aside figure {
+            @apply w-[10%];
+            @apply mb-16d;
+        }
+
+        aside section {
+            @apply w-2/4
+        }
+
+        figure {
+            @apply my-32d;
+        }
+
+        article {
+            @apply py-32d;
+            @apply px-16d;
+            @apply rounded-[1.33vw];
+        }
+
+        article h1 {
+            @apply mb-16d;
+            @apply text-titled;
         }
     }
 }
@@ -198,6 +244,18 @@
 
         .cultura-article p {
             @apply w-full;
+        }
+    }
+
+    @media screen(desktop) {
+
+        .uso-main article {
+            @apply w-[23%];
+            @apply py-16d;
+        }
+
+        .uso-main figure {
+            @apply w-[16.67vw];
         }
     }
 }

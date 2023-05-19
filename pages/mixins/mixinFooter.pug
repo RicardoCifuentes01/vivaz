@@ -1,14 +1,16 @@
 mixin mixinFooter
     footer
-        ul
+        ul(class="desktop:flex desktop:justify-around")
             -var contentsFooter = {'https://i.ibb.co/W2s9Vh8/pug.jpg':'Pug. Estructura y contenido.', 'https://i.ibb.co/vBdRgXZ/tailwind3.png':'Tailwind 3. Estilos', 'https://i.ibb.co/y05fjM1/git.png':'Git. Control de versiones.','https://i.ibb.co/64zyw46/pexels.jpg':'Pexels. Imágenes', 'https://i.ibb.co/wY23qW6/openIA.png':'OpenIA. Textos e imágenes', 'https://i.ibb.co/k6jDLmZ/figma.png':'Figma. Diseño.'}
             each text, image in contentsFooter
-                li(class="flex flex-row my-8m tablet:w-[70%] tablet:mx-auto tablet:my-16t")
-                    figure(class="mx-8m my-[0px] tablet:my-[0px] tablet:w-[10vw]")
+                li(class="flex flex-row items-center my-8m tablet:w-[70%] tablet:mx-auto tablet:my-16t desktop:flex-col desktop:w-[10vw] desktop:mx-auto")
+                    figure(class="mx-8m my-[0px] w-[12vw] tablet:w-[10vw] desktop:my-16d desktop:w-[3vw] desktop:mx-auto")
                         img(src=image, alt=text, title=text)
                     p= text
         h3 Mayo 2023
-        a(class="flex mx-auto text-gray-g", href="https://platzi.com/p/ricardo-racm/")
-            p(class="m-[0px] ml-[15%] w-2/4 tablet:ml-[30%] tablet:w-[30%]") Ricardo Cifuentes. Portafolio y perfil.
-            figure(class="m-[0px] mb-16m tablet:mb-16t")
-                img(src="https://i.ibb.co/S32Pccf/platzi.webp", alt="Perfil en Platzi" title="Perfil en Platzi")  
+        a(class="block mb-32d px-8m w-auto text-gray-g text-center", href="https://platzi.com/p/ricardo-racm/")
+            p(class="inline-block w-auto") Ricardo Cifuentes.
+                br
+                | Portafolio y perfil.
+            figure(class="inline-block m-[0px] w-[25%] tablet:w-[10%] desktop:w-[4%]")
+                img(src="https://i.ibb.co/S32Pccf/platzi.webp", alt="Perfil en Platzi" title="Perfil en Platzi") 

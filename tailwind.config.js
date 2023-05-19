@@ -96,6 +96,12 @@ module.exports = {
           'p1 p1 i1',
           'i2 p2 p2'
         ],
+        'layoutIndex': [
+          'i1 i1 p1 p1 p1',
+          'p2 p2 p2 i2 i2',
+          'i3 i3 p3 p3 p3',
+          'p4 p4 p4 i4 i4',
+        ],
       },
     },
   },
