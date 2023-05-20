@@ -206,6 +206,19 @@
 
 @layer components {
 
+    .significado-main article {
+        @apply mx-auto;
+    }
+
+    .significado-main p {
+        @apply w-full
+    }
+
+    .significado-main figure {
+        @apply mt-[0px];
+        @apply w-[60vw];
+    }
+
     .uso-main h1 {
         @apply text-black-g;
     }
@@ -228,6 +241,15 @@
 
     @media screen(tablet) {
 
+        .significado-main article {
+            @apply w-full;
+            @apply h-auto;
+        }
+
+        .significado-main figure {
+            @apply w-[24vw];
+        }
+
         .uso-main article {
             @apply mt-[0px];
             @apply w-[41.43%];
@@ -248,6 +270,10 @@
     }
 
     @media screen(desktop) {
+
+        .significado-main figure {
+            @apply w-[16vw];
+        }
 
         .uso-main article {
             @apply w-[23%];
