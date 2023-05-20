@@ -7,10 +7,10 @@ html(lang="en")
         include mixins/mixinLinksHead.pug 
         +mixinLinksHead
         title Significado
-    body 
+    body(class="dark:bg-darkMode-g dark:text-white-g")
         include mixins/mixinHeader.pug 
-        +mixinHeader 
         include mixins/mixinNav.pug 
+        +mixinHeader 
         +mixinNav
         aside 
             figure 
@@ -108,3 +108,4 @@ html(lang="en")
                         |Por otro lado, el negro también puede tener connotaciones negativas, como la muerte, la tristeza, la oscuridad, la opresión y la ausencia de vida. Debido a estas asociaciones, el negro a menudo se utiliza en la moda y el diseño para transmitir un mensaje de seriedad, elegancia y refinamiento, o en la publicidad para crear un ambiente de misterio y suspenso.
         include mixins/mixinFooter.pug
         +mixinFooter
+        script(src="../../darkMode.js") 

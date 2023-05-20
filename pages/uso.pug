@@ -7,11 +7,11 @@ html(lang="en")
         include mixins/mixinLinksHead.pug 
         +mixinLinksHead
         title Uso
-    body 
+    body(class="dark:bg-darkMode-g dark:text-white-g") 
         include mixins/mixinHeader.pug 
         include mixins/mixinNav.pug 
         +mixinHeader 
-        +mixinNav.pug
+        +mixinNav
         aside 
             figure 
                 svg(viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg")
@@ -25,7 +25,7 @@ html(lang="en")
                 img(class="w-[50%]", src="https://i.ibb.co/gV9CwKz/mujer-Uso1.jpg", alt="Mujer corriendo entre flores rojas", title="Mujer corriendo entre flores rojas")
                 img(class="w-[50%] h-2/4", src="https://i.ibb.co/YtywQrQ/museo-Uso2.jpg", alt="Fachada de museo en varios colores", title="Fachada de museo en varios colores")
                 img(class="w-[50%] h-2/4", src="https://i.ibb.co/cvczMTm/fresas-Uso3.jpg", alt="Fresas", title="Fresas")
-        main(class="uso-main tablet:flex tablet:flex-wrap flex-nowrap")
+        main(class="uso-main tablet:flex tablet:flex-wrap flex-nowrap ")
             article
                 h1 Teoría del color 
                 p 
@@ -47,7 +47,7 @@ html(lang="en")
                 h1 Armonía del color 
                 p La armonía del color se refiere a la forma en que diferentes colores interactúan entre sí para crear una combinación estética agradable y equilibrada. La armonía del color se utiliza en una variedad de disciplinas, desde el diseño gráfico hasta la moda y la decoración de interiores.
                     |Existen varios tipos de armonía del color que se pueden utilizar para crear diferentes efectos visuales. Algunos de los más comunes son:
-                ul 
+                ul(class="text-white-g")
                     -var contentsArmonia = {'https://i.ibb.co/h29vXKN/loboUso7.jpg':['Lobo con fondo rojo, verde y negro', 'Armonía del color complementario: se basa en la combinación de colores opuestos en la rueda de colores. Por ejemplo, el azul y el naranja son colores complementarios. Esta combinación puede ser muy impactante y dramática, y se utiliza a menudo en publicidad y diseño gráfico.', 'black-u'], 'https://i.ibb.co/hKdnvKh/atardecer-Uso8.jpg':['Atardecer','Armonía del color análogo: se basa en la combinación de colores que se encuentran cerca en la rueda de colores. Por ejemplo, el rojo, el naranja y el amarillo son colores análogos. Esta combinación es suave y relajante, y se utiliza a menudo en la decoración de interiores.', 'yellow-u'] , 'https://i.ibb.co/rv3mJYh/pastel-Uso9.jpg':['Pastel con decoración verde, azul y naranja', 'Armonía del color triádico: se basa en la combinación de tres colores equidistantes en la rueda de colores. Por ejemplo, el rojo, el amarillo y el azul son colores triádicos. Esta combinación puede ser muy vibrante y alegre.', 'green-u'], 'https://i.ibb.co/W27sR5M/flor-Uso10.jpg':['Flor roja', 'Armonía del color monótono: se basa en la combinación de diferentes tonalidades de un solo color. Por ejemplo, el azul claro, el azul medio y el azul oscuro son tonalidades monótonas. Esta combinación puede ser muy elegante y sofisticada.', 'fuxia-u']}
                     each content, image in contentsArmonia 
                         li(class=`bg-${content[2]} py-16m tablet:py-32t`)
@@ -79,3 +79,4 @@ html(lang="en")
                             p(class="text-black-g")= content[1]
         include mixins/mixinFooter.pug 
         +mixinFooter
+        script(src="../../darkMode.js") 

@@ -7,11 +7,11 @@ html(lang="en")
         include mixins/mixinLinksHead.pug 
         +mixinLinksHead
         title Cultura
-    body
+    body(class="dark:bg-darkMode-g dark:text-white-g")
         include mixins/mixinHeader.pug 
         include mixins/mixinNav.pug 
         +mixinHeader 
-        +mixinNav.pug
+        +mixinNav
         aside 
             figure 
                 svg(viewBox="0 0 100 100", xmlns="http://www.w3.org/2000/svg") 
@@ -22,7 +22,7 @@ html(lang="en")
             p Desde tiempos 
                 strong antiguos
                 |, el color ha tenido un papel importante en las diversas culturas del mundo. Cada cultura ha desarrollado una comprensión única de los colores, que se han utilizado para transmitir significados y simbolismos.
-        main(class="flex flex-col gap-16m cultura-article tablet:grid tablet:grid-areas-layoutCultura tablet:grid-cols-6 tablet:grid-rows-[10] tablet:gap-16t tablet:px-16t tablet:h-auto desktop:gap-16d desktop:px-16d")
+        main(class="flex flex-col gap-16m cultura-article text-white-g tablet:grid tablet:grid-areas-layoutCultura tablet:grid-cols-6 tablet:grid-rows-[10] tablet:gap-16t tablet:px-16t tablet:h-auto desktop:gap-16d desktop:px-16d")
             article(class="bg-brown1-c tablet:grid-in-e desktop:flex desktop:flex-nowrap desktop:gap-16d")
                 div(class="desktop:w-2/4")
                     h1 Antigua cultura egipcia 
@@ -91,3 +91,4 @@ html(lang="en")
                     img(src="https://i.ibb.co/VVbCYWc/america-Cultura7.jpg", alt="Hombre con vestimenta precolombina", title="Hombre con vestimenta precolombina")
         include mixins/mixinFooter.pug 
         +mixinFooter
+        script(src="../../darkMode.js") 

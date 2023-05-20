@@ -7,7 +7,7 @@ html(lang="en")
         include mixins/mixinLinksHead.pug 
         +mixinLinksHead
         title Inicio
-    body
+    body(class="dark:bg-darkMode-g dark:text-white-g")
         include mixins/mixinHeader.pug 
         +mixinHeader
         aside(class="desktop:flex desktop:gap-128d")
@@ -55,7 +55,7 @@ html(lang="en")
                     li(class=`mx-auto py-16m w-[92%] bg-${content[2]} rounded-[4vw] tablet:py-32t tablet:w-full tablet:rounded-[0px] desktop:m-[0px]`)
                         h2= title 
                         p(class="desktop:h-[59.43%]")= content[0]
-                        a(class=`block w-[65%] mt-16m mx-auto py-[2vw] text-center text-basem bg-${content[3]} rounded-[6.5vw] tablet:mt-16t tablet:py-16t tablet:w-[28.57%] tablet:text-baset desktop:py-16d desktop:w-[50%] desktop:text-based`, href=content[1]) Explora
+                        a(class=`block w-[65%] mt-16m mx-auto py-[2vw] text-center text-basem bg-${content[3]} rounded-[6.5vw] tablet:mt-16t tablet:py-16t tablet:w-[28.57%] tablet:text-baset desktop:py-16d desktop:w-[50%] desktop:text-based hover:drop-shadow-[2px_4px_6px_black]`, href=content[1]) Explora
         main 
             h2 Nuestra viveza 
             div(class="desktop:grid desktop:grid-areas-layoutIndex desktop:grid-cols-5 desktop:grid-rows-4 desktop:gap-16d desktop:px-64d desktop:items-center")
@@ -67,3 +67,4 @@ html(lang="en")
             p En resumen, el color es una parte integral de nuestra vida cotidiana. Nos rodea en todo momento y tiene una influencia profunda en nuestro estado de ánimo, emociones y percepciones. Cada uno de nosotros tiene una conexión única con los colores y podemos usarlos para expresarnos y comunicar nuestra  personalidad.
         include mixins/mixinFooter.pug 
         +mixinFooter
+        script(src="../../darkMode.js") 
