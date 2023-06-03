@@ -1,7 +1,7 @@
 mixin mixinNav 
     nav 
-        ul(class="flex flex-col gap-4m px-4m tablet:flex-row tablet:gap-32t tablet:px-32t")
+        ul(class="flex flex-col gap-[0vw] px-4m tablet:flex-row tablet:gap-32t tablet:px-32t")
             -var contentsNav = {'Inicio':['index.html', 'black-g', 'white-g', 'black-g', 'white-g'],'Significado':['significado.html', 'yellow-g', 'yellow-g', 'white-g', 'white-g'], 'Uso':['uso.html', 'blue-g', 'blue-g', 'white-g', 'white-g'],'Cultura':['cultura.html', 'purple-g','purple-g', 'white-g', 'white-g']}
             each content, title in contentsNav 
-                li(class=`mx-auto my-4m px-[2vw] w-[60vw] h-auto text-center border-l border-${content[1]} dark:border-${content[2]} tablet:border-l-0 tablet:border-b-2 tablet:w-full tablet:px-[0px] desktop:my-[0px] dark:hover:bg-${content[2]} hover:bg-${content[1]} hover:rounded-[5vw] duration-200`)
+                li(class=`mx-auto my-[2vw] px-[2vw] w-[60vw] h-auto text-center border-l border-${content[1]} dark:border-${content[2]} tablet:border-l-0 tablet:border-b-2 tablet:w-full tablet:px-[0px] desktop:my-[0px] dark:hover:bg-${content[2]} hover:bg-${content[1]} hover:rounded-[5vw] duration-200`)
                     a(class=`block w-full text-${content[1]} dark:text-${content[2]} text-titlem tablet:text-titlet desktop:text-titled hover:text-${content[4]} dark:hover:text-${content[3]} ` href=content[0])= title  
