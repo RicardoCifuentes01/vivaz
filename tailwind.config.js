@@ -4,8 +4,8 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     screens: {
-      'tablet': '600px',
-      'desktop': '1024px'
+      'tablet': '400px',
+      'desktop': '900px'
     },
     colors: {
       'yellow-g': '#FFC300',
